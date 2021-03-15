@@ -1,5 +1,3 @@
 <!-- miniprogram/pages/classic/classic.wxml -->
-<view>
-    <text>我是classic.wxml</text>
-    <v-like like="{{classic.like_status}}" count="{{classic.fav_nums}}"></v-like>
-</view>
+<v-like like="{{classic.like_status}}" count="{{classic.fav_nums}}"></v-like>
+<v-movie img="{{classic.image}}" content="{{classic.content}}"></v-movie>
