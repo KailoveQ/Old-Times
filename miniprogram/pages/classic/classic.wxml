@@ -1,4 +1,6 @@
 <!-- miniprogram/pages/classic/classic.wxml -->
-<v-episode index="{{classic.index}}"></v-episode>
-<v-like bind:like="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}"></v-like>
+<view class="header">
+    <v-episode index="{{classic.index}}"></v-episode>
+    <v-like bind:like="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}"></v-like>
+</view>
 <v-movie img="{{classic.image}}" content="{{classic.content}}"></v-movie>
