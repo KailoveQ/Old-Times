@@ -1,5 +1,5 @@
-<!--miniprogram/pages/classic/classic.wxml-->
+<!-- miniprogram/pages/classic/classic.wxml -->
 <view>
-<text>我是classic.wxml</text>
-<v-like></v-like>
+    <text>我是classic.wxml</text>
+    <v-like like="{{classic.like_status}}" count="{{classic.fav_nums}}"></v-like>
 </view>

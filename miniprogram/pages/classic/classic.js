@@ -1,6 +1,6 @@
 // miniprogram/pages/classic/classic.js
-import {HTTP} from '../../util/http'
-let http = new HTTP()
+import {ClassicModel} from '../../models/classic.js'
+let classic = new ClassicModel()
 
 Page({
 
@@ -15,18 +15,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    http.request({
-      url: 'classic/latest',
-      success: function(res){
-        // success
-        console.log(res)
-      },
-      fail: function() {
-        // fail 
-      },
-      complete: function() {
-        // complete
-      }
+    classic.getLatest((res)=>{
+      console.log(res)
+      this.setData({
+        classic:res
+      })
     })
   },
 
