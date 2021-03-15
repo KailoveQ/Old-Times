@@ -26,10 +26,12 @@ class HTTP{
           }else{
             let error_code = res.data.error_code
             this._show_error(error_code)
+            //服务器异常
           }
         }),
         fail:(err=>{
           this._show_error(1)
+          //API 调用失败
         })
       })
     }
@@ -40,6 +42,6 @@ class HTTP{
         icon:'none',  
         duration:2000 
       })
-    }
+    } 
 }
 export {HTTP};

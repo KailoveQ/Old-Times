@@ -1,4 +1,7 @@
 // miniprogram/pages/classic/classic.js
+import {HTTP} from '../../util/http'
+let http = new HTTP()
+
 Page({
 
   /**
@@ -12,13 +15,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'http://bl.talelin.com/v1/classic/latest',
-      data: {},
-      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: {
-        appkey:'AbhC31IG7ruCDp57'
-      }, // 设置请求的 header
+    http.request({
+      url: 'classic/latest',
       success: function(res){
         // success
         console.log(res)
