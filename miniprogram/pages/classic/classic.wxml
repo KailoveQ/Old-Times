@@ -1,0 +1,5 @@
+<!--miniprogram/pages/classic/classic.wxml-->
+<view>
+<text>我是classic.wxml</text>
+<v-like></v-like>
+</view>
