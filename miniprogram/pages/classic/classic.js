@@ -31,7 +31,12 @@ Page({
     likeModel.like(behavior,this.data.classic.id,
       this.data.classic.type)
   },
+  onNext(event){
 
+  },
+  onPrevious(event){
+
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
