@@ -24,7 +24,9 @@ Page({
     classicModel.getLatest((res)=>{
       // this._getLikeStatus(res.id ,res.type)
       this.setData({
-        classic:res
+        classic:res,
+        likeCount: res.fav_nums,
+        likeStatus: res.like_status
       })
     })
   },
