@@ -21,7 +21,11 @@ Component({
     pauseSrc: 'images/player@pause.png',
     playSrc: 'images/player@play.png',
   },
-
+  
+  detached: function (event) {
+    // wx:if hidden
+    // mMgr.stop()
+  },
   /**
    * 组件的方法列表
    */
