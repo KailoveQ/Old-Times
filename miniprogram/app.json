@@ -2,6 +2,7 @@
   "pages": [
     "pages/classic/classic"
   ],
+  "requiredBackgroundModes": ["audio", "location"],
   "window":{
     "navigationBarBackgroundColor": "#ffffff",
 		"navigationBarTitleText": "林间有风",
