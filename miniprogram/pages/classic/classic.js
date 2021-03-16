@@ -31,11 +31,14 @@ Page({
       this.data.classic.type)
   },
   onNext(event){
-
+    this._updateClassic('next')
   },
-  onPrevious(event){
+  onPrevious(nextOrPrevious){
+    this._updateClassic('previous')
+  },
+  _updateClassic(nextOrPrevious){
     let index = this.data.classic.index
-    classicModel.getPrevious(index,(res)=>{
+    classicModel.getClassic(index,nextOrPrevious,(res)=>{
       this.setData({
         classic:res,
         latest:classicModel.isLatest(res.index),
@@ -63,7 +66,7 @@ Page({
   onHide: function () {
 
   },
-
+  
   /**
    * 生命周期函数--监听页面卸载
    */
