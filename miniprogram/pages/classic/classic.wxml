@@ -3,7 +3,9 @@
     <view class="header">
         <v-episode index="{{classic.index}}"></v-episode>
         <v-like bind:like="onLike" like="{{likeStatus}}" count="{{likeCount}}"></v-like>
-    </view>
-    <v-movie img="{{classic.image}}" content="{{classic.content}}"></v-movie>
+    </view >
+    <v-movie hidden="{{classic.type!=100}}" img="{{classic.image}}" content="{{classic.content}}" />
+    <v-music wx:if="{{classic.type==200}}" img="{{classic.image}}" content="{{classic.content}}" title="{{classic.title}}" src="{{classic.url}}" />
+    <v-essay hidden="{{classic.type!=300}}" img="{{classic.image}}" content="{{classic.content}}" />
     <v-navi bind:left="onNext" bind:right="onPrevious" class="navi" title="{{classic.title}}" first="{{first}}" latest="{{latest}}"></v-navi>
 </view>
