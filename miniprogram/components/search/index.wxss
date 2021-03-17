@@ -55,11 +55,20 @@
     display: inline-block;
     border: none;
 }
-
+.cancel-container{
+    width: 50rpx;
+    height: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10rpx;
+  }
 .cancel-img {
-    width: 28rpx;
+    /* width: 28rpx;
     height: 28rpx;
-    margin-right: 20rpx;
+    margin-right: 20rpx; */
+    width: 14px;
+    height: 14px;
 }
 
 .history {

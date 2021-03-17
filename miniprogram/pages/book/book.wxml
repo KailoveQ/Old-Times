@@ -1,8 +1,5 @@
-<!-- miniprogram/pages/book/book.wxml -->
-<!-- <block wx:key="id" wx:for="{{books}}">
-    <v-book book="{{item}}"></v-book>
-</block> -->
-<view wx:if="{{!seraching}}" class="container">
+<!-- for 循环 wx:for -->
+<view wx:if="{{!searching}}" class="container">
     <view class="header">
         <view class='box' bind:tap="onSearching">
             <image src="/images/icon/search.png" />
@@ -18,4 +15,4 @@
         </view>
     </view>
 </view>
-<v-search wx:else bind:cancel="onCancel"></v-search>
+<v-search more="{{more}}" bind:cancel="onCancel" wx:if="{{searching}}" />

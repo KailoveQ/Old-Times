@@ -24,7 +24,7 @@ import {
   
     getMyBookCount() {
       return this.request({
-        url: '/book/favor/count'
+        url: 'book/favor/count'
       })
     }
   
