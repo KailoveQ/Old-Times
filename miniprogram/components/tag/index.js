@@ -3,10 +3,12 @@ Component({
   /**
    * 组件的属性列表
    */
-   options: {
-    multipleSlots: true,
-  },
-  externalClass:['tag-class'],
+	externalClasses: ['tag-class'],
+	options: {
+		// 启用插槽
+		multipleSlots: true
+	},
+
   properties: {
     text:String,
   },

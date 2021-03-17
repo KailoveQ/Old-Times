@@ -63,3 +63,19 @@
     </view>
     <input bindconfirm="onPost" class="post" placeholder='短评最多12个字'></input>
 </view>
+<v-mask wx:if="{{posting}}" />
+<wxs module="tool">
+    var highlight = function(index){
+        if(index==0){
+            return 'ex-tag1'
+        }
+        if(index==1){
+            return 'ex-tag2'
+        }
+        return ''
+    }
+
+    module.exports = {
+        highlight:highlight
+    }
+</wxs>
