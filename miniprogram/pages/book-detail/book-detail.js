@@ -51,17 +51,17 @@ Page({
     likeModel.like(like_or_cancel, this.data.book.id, 400)
   },
 
-  // onFakePost(event) {
-  //   this.setData({
-  //     posting: true
-  //   })
-  // },
+  onFakePost(event) {
+    this.setData({
+      posting: true
+    })
+  },
 
-  // onCancel(event) {
-  //   this.setData({
-  //     posting: false
-  //   })
-  // },
+  onCancel(event) {
+    this.setData({
+      posting: false
+    })
+  },
 
   // onPost(event) {
   //   const comment = event.detail.text || event.detail.value
