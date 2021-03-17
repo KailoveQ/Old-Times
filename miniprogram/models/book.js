@@ -36,7 +36,7 @@ import {
   
     getLikeStatus(bid) {
       return this.request({
-        url: `/book/${bid}/favor`
+        url:`book/${bid}/favor`
       })
     }
   
