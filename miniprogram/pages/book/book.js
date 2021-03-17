@@ -10,6 +10,7 @@ Page({
    */
   data: {
     books:[],
+    seraching:false
   },
 
   /**
@@ -23,9 +24,17 @@ Page({
       })
     }
     )
-
   },
-
+  onSearching(){
+    this.setData({
+      seraching:true
+    })
+  },
+  onCancel(){
+    this.setData({
+      seraching:false
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
