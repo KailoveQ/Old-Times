@@ -9,18 +9,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    books:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const promise = new Promise((resolve,reject)=>{
-        wx.getSystemInfo({
-          
-        })
-    })
+    bookModel.getHotList()
+    .then(res=>{
+      this.setData({
+        books:res
+      })
+    }
+    )
 
   },
 
@@ -35,10 +37,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const hotList = bookModel.getHotList()
-    hotList.then(
-      res=>console.log(res)
-    )
     
   },
 
