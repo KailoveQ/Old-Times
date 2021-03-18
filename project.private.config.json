@@ -17,6 +17,11 @@
           "name": "db guide",
           "pathName": "pages/databaseGuide/databaseGuide",
           "query": ""
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "scene": null
         }
       ]
     }
