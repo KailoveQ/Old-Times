@@ -1,0 +1,19 @@
+.about{
+    width: 750rpx;
+    height: 100%;
+}
+.vendor{
+    position: absolute;
+    top: 800rpx;
+    left: 500rpx;
+    height: 70rpx;
+    width: 190rpx;
+    z-index: 99;
+}
+.nav{
+    height: 70rpx;
+}
+page{
+    background-size: 100% 100%;
+    background-image: url();
+}

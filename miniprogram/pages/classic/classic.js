@@ -44,6 +44,7 @@ Page({
 
   _updateClassic(nextOrPrevious){
     const index = this.data.classic.index
+    console.log(index)
     classicModel.getClassic(index,nextOrPrevious,(res)=>{
       this._getLikeStatus(res.id ,res.type)
       this.setData({
