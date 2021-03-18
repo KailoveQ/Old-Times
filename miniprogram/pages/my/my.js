@@ -17,6 +17,7 @@ Page({
   /**
    * 页面的初始数据
    */
+
   data: {
     authorized: false,
     userInfo: null,
@@ -25,33 +26,57 @@ Page({
     loading:Boolean
   },
   onLoad: function (options) {
-    // wx.getUserInfo({
-    //   success:data=>{
-    //     // success
-    //     console.log(data)
-    //   }
-    // })
     this.userAuthorized()
+    if(this.data.loading){
+      this.setData({
+        authorized:true,
+      })
+      this.getMyFavor()
+      this.getMyBookCount()
+    }else{
+
+    }
+    // this.getMyBookCount()
+    // this.getMyFavor()
+  },
+  getMyFavor() {
+    classicModel.getMyFavor(res => {
+      this.setData({
+        classics: res
+      })
+    })
   },
 
+  getMyBookCount() {
+    classicModel.getMyFavor(res => {
+      this.setData({
+        bookCount:res.length
+      })
+    })
+  },
   userAuthorized(){
     //判断用户是否授权了
     wx.getSetting({
       success :data =>{
-        console.log(data)
         if(data.authSetting['scope.userInfo']){
-          console.log('监测到用户授权过了了')
           // 然后要让控制用户头像的变量authorized变true
-          wx.getUserInfo({
-            success:data=>{
-              this.setData({
-                authorized: true,
-                userInfo:data.userInfo
-              })
-            }
+          this.setData({
+            loading:true
           })
+          console.log(`用户已登录loading：${this.data.loading}`)
+          // wx.getUserInfo({
+          //   success:data=>{
+          //     this.setData({
+          //       authorized: true,
+          //       userInfo:data.userInfo
+          //     })
+          //   }
+          // })
         }else{
-          console.log('用户没有登陆')
+          this.setData({
+            loading:false
+          })
+          console.log(`用户未登录loading：${this.data.loading}`)
         //  喜欢的书 应该是 0，而且 authorized 得为false
         }
       }
@@ -66,10 +91,9 @@ Page({
     if(userInfo){
       this.setData({
         userInfo,
-        authorized: true
+        loading:true
       })
     }
-    
   },
 
   // wx.navigateTo({
