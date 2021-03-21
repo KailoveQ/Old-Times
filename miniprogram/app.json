@@ -3,8 +3,7 @@
     "pages/classic/classic",
     "pages/book/book",
     "pages/my/my",
-    "pages/book-detail/book-detail",
-    "pages/about/about"
+    "pages/book-detail/book-detail"
   ],
   "requiredBackgroundModes": [
     "audio",
